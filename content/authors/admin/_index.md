@@ -113,5 +113,8 @@ social:
 highlight_name: true
 ---
 
-I am a PhD Fellow in Political Science. My research interests include causal inference, political psychology, economic voting, and the psychology of group identity. 
+I am a PhD Fellow in Political Science at the University of Copenhagen. 
+
+My research focuses on political behavior. Substantively, I currently do research on two topics, the role of the economy in elections and the role of social group identities in political psychology. Two of my current working papers concern the role of group identities in economic voting. One focuses on how voters understand changes in their personal economic conditions, and specifically whether they are able to correctly tell when the government is to blame. Finally, one paper focuses on how party rhetoric on social groups affects voters' perceptions of group-party links. Methodologically, I specialize in both experimental methods and observational causal inference. 
+
 {style="text-align: justify;"}
