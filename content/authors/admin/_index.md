@@ -25,24 +25,24 @@ organizations:
 bio: My research interests include the role of the economy in elections, the psychology of social group identities and causal inference.
 
 # Interests to show in About widget
-interests:
-  - Causal Inference
-  - Experimental Political Science
-  - Political Psychology
-  - Economic Voting
+#interests:
+#  - Causal Inference
+#  - Experimental Political Science
+#  - Political Psychology
+#  - Economic Voting
 
 # Education to show in About widget
-education:
-  courses:
-    - course: MSc in Political Science
-      institution: University of Copenhagen
-      year: 2023
-    - course: MSc in Sociology
-      institution: University of Oxford
-      year: 2021
-    - course: BA in Philosophy, Politics and Economics
-      institution: University of Warwick
-      year: 2020
+#education:
+#  courses:
+#    - course: MSc in Political Science
+#      institution: University of Copenhagen
+#      year: 2023
+#    - course: MSc in Sociology
+#      institution: University of Oxford
+#      year: 2021
+#    - course: BA in Philosophy, Politics and Economics
+#      institution: University of Warwick
+#      year: 2020
 
 # Skills
 # For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons
@@ -113,5 +113,5 @@ social:
 highlight_name: true
 ---
 
-I am a PhD Fellow in Political Science. My research interests include causal inference, political psychology, economic voting and the psychology of group identity. 
+I am a PhD Fellow in Political Science. My research interests include causal inference, political psychology, economic voting, and the psychology of group identity. 
 {style="text-align: justify;"}
