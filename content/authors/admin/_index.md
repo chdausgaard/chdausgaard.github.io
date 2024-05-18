@@ -1,13 +1,10 @@
 ---
 # Display name
-title: 吳健雄
-
-# Name pronunciation (optional)
-name_pronunciation: Chien Shiung Wu
+title: Christoffer H. Dausgaard
 
 # Full name (for SEO)
-first_name: Shiung Wu
-last_name: Chien
+first_name: Christoffer Hentzer
+last_name: Dausgaard
 
 # Status emoji
 status:
@@ -17,74 +14,70 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: Professor of Artificial Intelligence
+role: PhD Fellow in Political Science
 
 # Organizations/Affiliations to show in About widget
 organizations:
-  - name: Stanford University
-    url: https://www.stanford.edu/
+  - name: University of Copenhagen
+    url: https://politicalscience.ku.dk/
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include distributed robotics, mobile computing and programmable matter.
+bio: My research interests include the role of the economy in elections, the psychology of social group identities and causal inference.
 
 # Interests to show in About widget
 interests:
-  - Artificial Intelligence
-  - Computational Linguistics
-  - Information Retrieval
+  - Causal Inference
+  - Experimental Political Science
+  - Political Psychology
+  - Economic Voting
 
 # Education to show in About widget
 education:
   courses:
-    - course: PhD in Artificial Intelligence
-      institution: Stanford University
-      year: 2012
-    - course: MEng in Artificial Intelligence
-      institution: Massachusetts Institute of Technology
-      year: 2009
-    - course: BSc in Artificial Intelligence
-      institution: Massachusetts Institute of Technology
-      year: 2008
+    - course: MSc in Political Science
+      institution: University of Copenhagen
+      year: 2023
+    - course: MSc in Sociology
+      institution: University of Oxford
+      year: 2021
+    - course: BA in Philosophy, Politics and Economics
+      institution: University of Warwick
+      year: 2020
 
 # Skills
 # For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons
 skills:
   - name: Technical
     items:
-      - name: Python
+      - name: R
         description: ''
         percent: 80
-        icon: python
-        icon_pack: fab
-      - name: Data Science
+        icon: r
+        icon_pack: devicon
+      - name: Causal Inference
         description: ''
         percent: 100
         icon: chart-line
         icon_pack: fas
-      - name: SQL
+      - name: Stata
         description: ''
         percent: 40
-        icon: database
-        icon_pack: fas
+        icon: devicon
+        icon_pack: stata
   - name: Hobbies
     color: '#eeac02'
     color_border: '#f0bf23'
     items:
-      - name: Hiking
-        description: ''
-        percent: 60
-        icon: person-hiking
-        icon_pack: fas
-      - name: Cats
+      - name: Music
         description: ''
         percent: 100
-        icon: cat
-        icon_pack: fas
-      - name: Photography
+        icon: 
+        icon_pack: 
+      - name: Food
         description: ''
-        percent: 80
-        icon: camera-retro
-        icon_pack: fas
+        percent: 100
+        icon: 
+        icon_pack: 
 
 # Social/Academic Networking
 # For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons
@@ -93,22 +86,22 @@ skills:
 social:
   - icon: envelope
     icon_pack: fas
-    link: '/#contact'
+    link: 'mailto:c.dausgaard@ifs.ku.dk'
   - icon: twitter
     icon_pack: fab
-    link: https://twitter.com/GeorgeCushen
+    link: https://x.com/chdausgaard
     label: Follow me on Twitter
     display:
       header: true
   - icon: graduation-cap # Alternatively, use `google-scholar` icon from `ai` icon pack
     icon_pack: fas
-    link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
+    link: https://scholar.google.com/citations?user=cgRByH8AAAAJ&hl=da
   - icon: github
     icon_pack: fab
-    link: https://github.com/gcushen
+    link: https://github.com/chdausgaard/
   - icon: linkedin
     icon_pack: fab
-    link: https://www.linkedin.com/
+    link: https://www.linkedin.com/in/cdausgaard/
   # Link to a PDF of your resume/CV.
   # To use: copy your resume to `static/uploads/resume.pdf`, enable `ai` icons in `params.yaml`,
   # and uncomment the lines below.
@@ -120,5 +113,5 @@ social:
 highlight_name: true
 ---
 
-Chien Shiung Wu is a professor of artificial intelligence at the Stanford AI Lab. Her research interests include distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+I am a PhD Fellow in Political Science. My research interests include causal inference, political psychology, economic voting and the psychology of group identity. 
 {style="text-align: justify;"}
