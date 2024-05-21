@@ -96,25 +96,31 @@ social:
   - icon: graduation-cap # Alternatively, use `google-scholar` icon from `ai` icon pack
     icon_pack: fas
     link: https://scholar.google.com/citations?user=cgRByH8AAAAJ&hl=da
-  - icon: github
-    icon_pack: fab
-    link: https://github.com/chdausgaard/
+  #- icon: github
+  #  icon_pack: fab
+  #  link: https://github.com/chdausgaard/
   - icon: linkedin
     icon_pack: fab
     link: https://www.linkedin.com/in/cdausgaard/
   # Link to a PDF of your resume/CV.
   # To use: copy your resume to `static/uploads/resume.pdf`, enable `ai` icons in `params.yaml`,
   # and uncomment the lines below.
-  - icon: cv
-    icon_pack: ai
-    link: uploads/resume.pdf
+  #- icon: cv
+  #  icon_pack: ai
+  #  link: uploads/resume.pdf
 
 # Highlight the author in author lists? (true/false)
 highlight_name: true
 ---
 
-I am a PhD Fellow in Political Science at the University of Copenhagen. 
+I am a PhD Fellow in Political Science at the University of Copenhagen entering my final year. I'm currently visiting Aarhus University and this Fall, I'll be visiting the Institute of Governmental Studies at UC Berkeley. 
 
-My research focuses on political behavior. Substantively, I currently do research on two topics, the role of the economy in elections and the role of social group identities in political psychology. Two of my current working papers concern the role of group identities in economic voting. One focuses on how voters understand changes in their personal economic conditions, and specifically whether they are able to correctly tell when the government is to blame. Finally, one paper focuses on how party rhetoric on social groups affects voters' perceptions of group-party links. Methodologically, I specialize in both experimental methods and observational causal inference. 
+I study the behavior and psychology of voters with a dual focus on the role of **group identities** and the role of **the economy**. When and why do voters act on the interests of their social in-groups? And how do voters make sense of national economic developments politically? To examine these question, I draw on a combination of experiments and causal inference designs for observational data. 
+
+In two current working papers, I examine how group psychology shapes voters' reactions to economic growth and targeted policies, beyond sociotropic and egotropic voting. In another working paper, with Frederik Hjorth, we examine how voters update perceptions of group-party linkages in response to political rhetoric, using a trained language model to classify party elite communication over three decades. I'm also currently working on a project with Rune Stubager and Mike Lewis-Beck on the role of out-group sympathies for vote choice. 
+
+I also do work on economic voting without the group perspective. In a recent book chapter, with Martin Vinæs Larsen, we use a combination of experiments and shift-share instrumental variables to isolate the effects of rising energy prices and the government's 'Heat Check' benefit policy on the 2022 Danish Parliamentary Election. In a current working paper, I apply policy microsimulation models to survey panel data to examine whether voters distinguish political from non-political changes in their personal welfare when assessing incumbent performance. 
+
+I spend most of my spare time listening to podcasts on Danish and American politics, playing music with friends, embarking on large baking projects, and social and cultural activities in Copenhagen, where I live with my partner, Signe. 
 
 {style="text-align: justify;"}
