@@ -3,7 +3,7 @@ title: 'Vælgernes Sympatier med Sociale Grupper: En Overset Faktor bag Partival
 authors:
 - Christoffer Hentzer Dausgaard
 - Rune Stubager
-date: '2024-01-01'
+date: '2024-05-01'
 publishDate: '2024-05-18T19:09:55.113684Z'
 publication_types:
 - chapter
