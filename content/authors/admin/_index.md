@@ -113,7 +113,7 @@ social:
 highlight_name: true
 ---
 
-I am a PhD Fellow in Political Science at the University of Copenhagen entering my final year. I'm currently visiting Aarhus University and I'll be visiting UC Berkeley as  Fulbright Scholar this Fall. 
+I am a PhD Fellow in Political Science at the University of Copenhagen entering my final year. I'm currently visiting Aarhus University and I'll be visiting UC Berkeley as a Fulbright Scholar this Fall. 
 
 I study the behavior and psychology of voters focusing on the role of **group identities** and **the economy**. When and why do voters act on the basis of in-group interests? And how do voters make sense of national economic developments politically? To examine these questions, I draw on a combination of experiments and causal inference designs for observational data. 
 
