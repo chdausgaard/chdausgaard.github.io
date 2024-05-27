@@ -87,8 +87,8 @@ social:
   - icon: envelope
     icon_pack: fas
     link: 'mailto:c.dausgaard@ifs.ku.dk'
-  - icon: brands/x
-  #  icon_pack: brands
+  - icon: x-twitter
+    icon_pack: fab
     link: https://x.com/chdausgaard
     label: Follow me on Twitter
     display:
