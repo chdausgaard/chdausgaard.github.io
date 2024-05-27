@@ -18,15 +18,15 @@ marketing:
     site_type: Person
     local_business_type: ''
     org_name: ''
-    description: 'A highly-customizable Hugo academic resume theme powered by Hugo Blox Builder.'
-    twitter: 'GetResearchDev'
+    description: 'Academic researcher in political science.'
+    twitter: 'chdausgaard'
   analytics:
     google_analytics: ''
     baidu_tongji: ''
     google_tag_manager: ''
     microsoft_clarity: ''
   verification:
-    google: ''
+    google: 'google-site-verification=5WqVbJ6lrmJntHgpmTC-Lf94KWf_vtohSZuQ25ULtE8'
     baidu: ''
 
 # Site header
@@ -45,7 +45,7 @@ header:
 
 footer:
   copyright:
-    notice: '© {year} Me. This work is licensed under {license}'
+    notice: '© {year} Christoffer H. Dausgaard. This work is licensed under {license}'
     license:
       enable: true
       allow_derivatives: false
