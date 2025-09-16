@@ -16,5 +16,4 @@ cms_exclude: true
 #  image: ''
 
 type: page
-layout: custom-publications
 ---

@@ -1,0 +1,26 @@
+{{ define "main" }}
+<div class="space-y-10">
+
+  <section>
+    <h2 class="text-2xl font-bold mb-4">Published Journal Articles</h2>
+    {{ range where .Site.RegularPages "Section" "publication/journal" }}
+      {{ partial "publication-card.html" . }}
+    {{ end }}
+  </section>
+
+  <section>
+    <h2 class="text-2xl font-bold mb-4">Working Papers</h2>
+    {{ range where .Site.RegularPages "Section" "publication/working" }}
+      {{ partial "publication-card.html" . }}
+    {{ end }}
+  </section>
+
+  <section>
+    <h2 class="text-2xl font-bold mb-4">Book Chapters</h2>
+    {{ range where .Site.RegularPages "Section" "publication/chapters" }}
+      {{ partial "publication-card.html" . }}
+    {{ end }}
+  </section>
+
+</div>
+{{ end }}
