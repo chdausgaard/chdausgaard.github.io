@@ -1,4 +1,4 @@
----
+#---
 title: Research
 cms_exclude: true
 
@@ -7,11 +7,14 @@ cms_exclude: true
 #   2 = Compact
 #   3 = Card
 #   4 = Citation
-view: 2
-filter: false
+# view: 2
+# filter: false
 
 # Optional header image (relative to `static/media/` folder).
-banner:
-  caption: ''
-  image: ''
+# banner:
+#  caption: ''
+#  image: ''
+
+type: page
+layout: custom-publications
 ---
