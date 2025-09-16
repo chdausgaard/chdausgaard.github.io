@@ -14,7 +14,7 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: PhD Fellow in Political Science
+role: PhD Candidate in Political Science
 
 # Organizations/Affiliations to show in About widget
 organizations:
@@ -117,7 +117,9 @@ I am a PhD Candidate in Political Science at the University of Copenhagen.
 
 I study the behavior and psychology of voters focusing on the role of **group identities** and **retrospective voting**. How do voters evaluate government performance when policies affect people differently? How do voters’ group identities guide their interpretations of policy and incumbent performance? To examine these questions, I draw on a combination of experiments, text-as-data methods, and causal inference designs for observational data. 
 
-My first paper, conditionally accepted in the *American Journal of Political Science*, argues that voters engage in group-based retrospective voting to hold incumbents accountable for economic policy. In my second paper, revised and resubmitted to the *Journal of Politics*, I and my co-author, Frederik Hjorth, show that voters perceptions of group-party linkages strongly track rhetorical group appeals using a fine-tuned language model to classify party elite communication over three decades. 
+My first paper, conditionally accepted in the *American Journal of Political Science*, argues that voters engage in group-based retrospective voting, holding incumbents accountable for the economic performance of their social groups. In my second paper, revised and resubmitted to the *Journal of Politics*, I and my co-author, Frederik Hjorth, examine how voters' perceptions of group-party linkages are shaped by rhetorical group appeals using a fine-tuned language model to classify party elite communication over three decades. 
+
+Beyond my dissertation research, I work on related topics in political behavior. In one paper, co-authored with Frederik Hjorth and Martin Vinæs, we study the effects of mainstream party accommodation of the radical right. In another, co-authored with Daniel Cruz, we study how Latin American legislators' support for democracy is shaped by their own party's access to power. Finally, in a paper co-authored with Greg Eady, we study how damaging information about politicians can increase partisans' overall political cynicism rather than fostering accountability. 
 
 Besides work, I spend most of my time endlessly listening to podcasts on Danish and American politics, playing music with friends, embarking on large baking projects, and social and cultural activities in Copenhagen, where I live with my partner, Signe. 
 
