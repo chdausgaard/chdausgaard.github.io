@@ -113,14 +113,12 @@ social:
 highlight_name: true
 ---
 
-I am a PhD Fellow in Political Science at the University of Copenhagen. This Fall, I'm visiting UC Berkeley on a Fulbright scholarship. 
+I am a PhD Candidate in Political Science at the University of Copenhagen. 
 
-I study the behavior and psychology of voters focusing on the role of **group identities** and **the economy**. When and why do voters act on the basis of in-group interests? And how do voters make sense of national economic developments politically? To examine these questions, I draw on a combination of experiments and causal inference designs for observational data. 
+I study the behavior and psychology of voters focusing on the role of **group identities** and **retrospective voting**. How do voters evaluate government performance when policies affect people differently? How do voters’ group identities guide their interpretations of policy and incumbent performance? To examine these questions, I draw on a combination of experiments, text-as-data methods, and causal inference designs for observational data. 
 
-In two current working papers, I examine how group psychology shapes voters' reactions to economic growth and targeted policies beyond sociotropic and egotropic voting. In another working paper, with Frederik Hjorth, we examine how voters update perceptions of group-party linkages in response to political rhetoric, using a fine-tuned language model to classify party elite communication over three decades. I'm also currently working on a project with Rune Stubager and Mike Lewis-Beck on the role of out-group sympathies for vote choice. 
+My first paper, conditionally accepted in the *American Journal of Political Science*, argues that voters engage in group-based retrospective voting to hold incumbents accountable for economic policy. In my second paper, revised and resubmitted to the *Journal of Politics*, I and my co-author, Frederik Hjorth, show that voters perceptions of group-party linkages strongly track rhetorical group appeals using a fine-tuned language model to classify party elite communication over three decades. 
 
-I also do work on classical topics in economic voting. In a current working paper, I apply policy microsimulation models to survey panel data to examine whether voters distinguish political from non-political changes in their personal welfare when assessing incumbent performance. In a recent book chapter, with Martin Vinæs Larsen, we use a combination of experiments and shift-share instrumental variables to isolate the effects of rising energy prices and the government's 'Heat Check' benefit policy on the 2022 Danish Parliamentary Election. 
-
-Besides work, I spend most of my time endlessly listening to podcasts on Danish and American politics, playing music with friends, playing squash with my brothers, embarking on large baking projects, and social and cultural activities in Copenhagen, where I live with my partner, Signe. 
+Besides work, I spend most of my time endlessly listening to podcasts on Danish and American politics, playing music with friends, embarking on large baking projects, and social and cultural activities in Copenhagen, where I live with my partner, Signe. 
 
 {style="text-align: justify;"}
