@@ -1,9 +1,35 @@
 <article class="border rounded-2xl p-4 shadow-sm mb-6 bg-white">
+  
+  <!-- Title -->
   <h3 class="text-xl font-semibold mb-2">{{ .Title }}</h3>
+
+  <!-- Authors -->
+  {{ with .Params.authors }}
+    <p class="text-gray-600 mb-1">
+      {{ range $index, $author := . }}
+        {{ if $index }}, {{ end }}{{ $author }}
+      {{ end }}
+    </p>
+  {{ end }}
+
+  <!-- Date -->
+  {{ with .Date }}
+    <p class="text-gray-500 text-sm mb-2">{{ .Format "January 2, 2006" }}</p>
+  {{ end }}
+
+  <!-- Publication type/venue -->
+  {{ with .Params.publication }}
+    <p class="italic text-gray-700 mb-2">{{ . | safeHTML }}</p>
+  {{ end }}
+
+  <!-- Abstract -->
   {{ with .Params.abstract }}
     <p class="mb-3 text-gray-700">{{ . }}</p>
   {{ end }}
+
+  <!-- Featured Graph -->
   {{ with .Params.featured_graph }}
-    <img src="{{ . }}" alt="Key graph for {{ $.Title }}" class="rounded-xl shadow mb-3">
+    <img src="{{ . }}" alt="Graph for {{ $.Title }}" class="rounded-xl shadow mb-3">
   {{ end }}
+
 </article>
