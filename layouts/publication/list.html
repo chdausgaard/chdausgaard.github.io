@@ -3,21 +3,24 @@
 
   <section>
     <h2 class="text-2xl font-bold mb-4">Published Journal Articles</h2>
-    {{ range where .Site.RegularPages "Section" "publication/journal" }}
+    {{ $journal := where .Site.RegularPages "File.Path" "match" "^publication/journal/" }}
+    {{ range $journal }}
       {{ partial "publication-card.html" . }}
     {{ end }}
   </section>
 
   <section>
     <h2 class="text-2xl font-bold mb-4">Working Papers</h2>
-    {{ range where .Site.RegularPages "Section" "publication/working" }}
+    {{ $working := where .Site.RegularPages "File.Path" "match" "^publication/working/" }}
+    {{ range $working }}
       {{ partial "publication-card.html" . }}
     {{ end }}
   </section>
 
   <section>
     <h2 class="text-2xl font-bold mb-4">Book Chapters</h2>
-    {{ range where .Site.RegularPages "Section" "publication/chapters" }}
+    {{ $chapters := where .Site.RegularPages "File.Path" "match" "^publication/chapters/" }}
+    {{ range $chapters }}
       {{ partial "publication-card.html" . }}
     {{ end }}
   </section>
