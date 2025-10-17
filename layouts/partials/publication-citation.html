@@ -9,7 +9,7 @@
 
     {{ with .Params.publication }} {{ . }}.{{ end }}
 
-    {{/* PDF button: prefer a page bundle PDF (GetMatch), fall back to .Params.pdf */}}
+    {{/* PDF button: prefer a page bundle PDF (GetMatch), falls back to .Params.pdf */}}
     {{ with .Resources.GetMatch "*.pdf" }}
       <a class="ml-2 inline-block px-2 py-1 text-sm font-medium text-white bg-blue-600 rounded hover:bg-blue-700" href="{{ .RelPermalink }}" target="_blank" rel="noopener">PDF</a>
     {{ else }}
