@@ -17,6 +17,7 @@ content/publication/journal/running_tally/graph1.png
 content/publication/working/who_benefits/index.md
 content/publication/working/who_benefits/cite.bib
 content/publication/working/who_benefits/graph1.png
+content/publication/working/personal_political/paper.pdf
 content/publication/working/personal_political/index.md
 content/publication/working/personal_political/cite.bib
 content/publication/working/personal_political/graph1.png
@@ -29,7 +30,5 @@ content/post/_index.md
 content/terms.md
 layouts/publication/list.html
 layouts/partials/publication-card.html
-layouts/partials/publication-citation.html
-layouts/partials/collection-item.html
 layouts/_default/custom-publications.html
 static/uploads/resume.pdf
