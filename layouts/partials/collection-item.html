@@ -1,0 +1,30 @@
+<article class="py-2">
+  {{ if eq .Type "publication" }}
+    {{/* parent list page (where the collection is embedded) */}}
+    {{ $parent := .Page }}
+
+    {{/* Homepage: show compact citation */}}
+    {{ if $parent.IsHome }}
+      {{ partial "publication-citation.html" . }}
+
+    {{/* Research list page (adjust the permalink if your research page lives elsewhere)
+        or any section list: show the full publication card */}}
+    {{ else if or (eq $parent.RelPermalink "/research/") (eq $parent.Kind "section") }}
+      {{ partial "publication-card.html" . }}
+
+    {{/* Default: show citation */}}
+    {{ else }}
+      {{ partial "publication-citation.html" . }}
+    {{ end }}
+
+  {{ else }}
+    <h3 class="text-lg font-semibold">
+      <a href="{{ .RelPermalink }}" class="text-blue-600 hover:underline">{{ .Title }}</a>
+    </h3>
+    {{ with .Summary }}
+      <p class="text-sm text-gray-700 mt-1">{{ . | safeHTML }}</p>
+    {{ else if .Params.abstract }}
+      <p class="text-sm text-gray-700 mt-1">{{ .Params.abstract | safeHTML }}</p>
+    {{ end }}
+  {{ end }}
+</article>
