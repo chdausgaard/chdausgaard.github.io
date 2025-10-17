@@ -1,18 +1,16 @@
 <article class="py-2">
   {{ if eq .Type "publication" }}
-    {{/* parent list page (where the collection is embedded) */}}
-    {{ $parent := .Page }}
+    {{ $listPage := .Page }}
 
-    {{/* Homepage: show compact citation */}}
-    {{ if $parent.IsHome }}
+    {{/* Homepage: compact citation */}}
+    {{ if $listPage.IsHome }}
       {{ partial "publication-citation.html" . }}
 
-    {{/* Research list page (adjust the permalink if your research page lives elsewhere)
-        or any section list: show the full publication card */}}
-    {{ else if or (eq $parent.RelPermalink "/research/") (eq $parent.Kind "section") }}
+    {{/* Publications list page: use the full card (content/publication/_index.md) */}}
+    {{ else if eq $listPage.Section "publication" }}
       {{ partial "publication-card.html" . }}
 
-    {{/* Default: show citation */}}
+    {{/* Fallback: citation */}}
     {{ else }}
       {{ partial "publication-citation.html" . }}
     {{ end }}
