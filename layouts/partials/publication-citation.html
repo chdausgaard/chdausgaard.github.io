@@ -9,11 +9,17 @@
 
     {{ with .Params.publication }} {{ . }}.{{ end }}
 
-    {{/* PDF button: prefer a page bundle PDF (GetMatch), falls back to .Params.pdf */}}
-    {{ with .Resources.GetMatch "*.pdf" }}
-      <a class="ml-2 inline-block px-2 py-1 text-sm font-medium text-white bg-blue-600 rounded hover:bg-blue-700" href="{{ .RelPermalink }}" target="_blank" rel="noopener">PDF</a>
+    {{/* Robust PDF link: handle both .Page and direct page contexts and fallback to front-matter */}}
+    {{ if .Page }}
+      {{ with .Page.Resources.GetMatch "*.pdf" }}
+        <a class="ml-2 inline-block px-2 py-1 text-sm font-medium text-white bg-blue-600 rounded hover:bg-blue-700" href="{{ .RelPermalink }}" target="_blank" rel="noopener">PDF</a>
+      {{ else if .Page.Params.pdf }}
+        <a class="ml-2 inline-block px-2 py-1 text-sm font-medium text-white bg-blue-600 rounded hover:bg-blue-700" href="{{ .Page.Params.pdf }}" target="_blank" rel="noopener">PDF</a>
+      {{ end }}
     {{ else }}
-      {{ if .Params.pdf }}
+      {{ with .Resources.GetMatch "*.pdf" }}
+        <a class="ml-2 inline-block px-2 py-1 text-sm font-medium text-white bg-blue-600 rounded hover:bg-blue-700" href="{{ .RelPermalink }}" target="_blank" rel="noopener">PDF</a>
+      {{ else if .Params.pdf }}
         <a class="ml-2 inline-block px-2 py-1 text-sm font-medium text-white bg-blue-600 rounded hover:bg-blue-700" href="{{ .Params.pdf }}" target="_blank" rel="noopener">PDF</a>
       {{ end }}
     {{ end }}
