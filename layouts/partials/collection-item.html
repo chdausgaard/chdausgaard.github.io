@@ -2,15 +2,10 @@
   {{ if eq .Type "publication" }}
     {{ $listPage := .Page }}
 
-    {{/* Homepage: compact citation */}}
     {{ if $listPage.IsHome }}
       {{ partial "publication-citation.html" . }}
-
-    {{/* Publications section page (content/publication/_index.md): show full card */}}
     {{ else if eq $listPage.Section "publication" }}
       {{ partial "publication-card.html" . }}
-
-    {{/* Fallback: citation */}}
     {{ else }}
       {{ partial "publication-citation.html" . }}
     {{ end }}
