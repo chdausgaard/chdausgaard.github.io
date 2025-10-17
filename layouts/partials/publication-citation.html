@@ -1,0 +1,19 @@
+<article class="py-2">
+  <p class="text-sm text-gray-800">
+    {{ with .Params.authors }}
+      {{ range $i, $a := . }}{{ if $i }}, {{ end }}{{ $a }}{{ end }}.
+    {{ end }}
+
+    {{ with .Date }}({{ .Format "2006" }}){{ end }}.
+    <strong>{{ .Title }}</strong>.
+
+    {{ with .Params.publication }} {{ . }}.{{ end }}
+
+    {{ $pdf := .Resources.GetMatch "*.pdf" }}
+    {{ if $pdf }}
+      <a class="ml-2 text-blue-600 hover:underline" href="{{ $pdf.RelPermalink }}" target="_blank" rel="noopener">PDF</a>
+    {{ else if .Params.pdf }}
+      <a class="ml-2 text-blue-600 hover:underline" href="{{ .Params.pdf }}" target="_blank" rel="noopener">PDF</a>
+    {{ end }}
+  </p>
+</article>
