@@ -9,16 +9,18 @@
 
     {{ with .Params.publication }} {{ . }}.{{ end }}
 
-    {{/* Robust PDF link: handle both .Page and direct page contexts and fallback to front-matter */}}
+    {{/* Robust PDF link: use local vars + nested ifs to avoid parse errors */}}
     {{ if .Page }}
-      {{ with .Page.Resources.GetMatch "*.pdf" }}
-        <a class="ml-2 inline-block px-2 py-1 text-sm font-medium text-white bg-blue-600 rounded hover:bg-blue-700" href="{{ .RelPermalink }}" target="_blank" rel="noopener">PDF</a>
+      {{ $pdf := .Page.Resources.GetMatch "*.pdf" }}
+      {{ if $pdf }}
+        <a class="ml-2 inline-block px-2 py-1 text-sm font-medium text-white bg-blue-600 rounded hover:bg-blue-700" href="{{ $pdf.RelPermalink }}" target="_blank" rel="noopener">PDF</a>
       {{ else if .Page.Params.pdf }}
         <a class="ml-2 inline-block px-2 py-1 text-sm font-medium text-white bg-blue-600 rounded hover:bg-blue-700" href="{{ .Page.Params.pdf }}" target="_blank" rel="noopener">PDF</a>
       {{ end }}
     {{ else }}
-      {{ with .Resources.GetMatch "*.pdf" }}
-        <a class="ml-2 inline-block px-2 py-1 text-sm font-medium text-white bg-blue-600 rounded hover:bg-blue-700" href="{{ .RelPermalink }}" target="_blank" rel="noopener">PDF</a>
+      {{ $pdf := .Resources.GetMatch "*.pdf" }}
+      {{ if $pdf }}
+        <a class="ml-2 inline-block px-2 py-1 text-sm font-medium text-white bg-blue-600 rounded hover:bg-blue-700" href="{{ $pdf.RelPermalink }}" target="_blank" rel="noopener">PDF</a>
       {{ else if .Params.pdf }}
         <a class="ml-2 inline-block px-2 py-1 text-sm font-medium text-white bg-blue-600 rounded hover:bg-blue-700" href="{{ .Params.pdf }}" target="_blank" rel="noopener">PDF</a>
       {{ end }}
