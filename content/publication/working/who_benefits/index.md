@@ -9,7 +9,7 @@ abstract: "A central question in public opinion is how voters respond to distrib
 
 #summary: Why do voters reward governments for targeted benefits? The obvious explanation is pocketbook motivations, i.e. the tendency to hold incumbents accountable for personal welfare changes. But in most cases, this behavior is equally consistent with a group-based response, i.e. voters rewarding the government for targeting their in-group. I test and find support for this alternative explanation in three survey experiments in Denmark and the US, suggesting that the effect is highly heterogeneous depending on group identity strength.
 tags: economic voting, social groups
-featured: true
+featured: false
 featured_graph: "graph1.png"
 
 ---
