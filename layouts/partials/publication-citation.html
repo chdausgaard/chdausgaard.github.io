@@ -9,11 +9,11 @@
 
     {{ with .Params.publication }} {{ . }}.{{ end }}
 
-    {{ $pdf := .Resources.GetMatch "*.pdf" }}
-    {{ if $pdf }}
-      <a class="ml-2 text-blue-600 hover:underline" href="{{ $pdf.RelPermalink }}" target="_blank" rel="noopener">PDF</a>
+    {{/* PDF button: prefer a page bundle PDF (GetMatch), fall back to .Params.pdf */}}
+    {{ with .Resources.GetMatch "*.pdf" }}
+      <a class="ml-2 inline-block px-2 py-1 text-sm font-medium text-white bg-blue-600 rounded hover:bg-blue-700" href="{{ .RelPermalink }}" target="_blank" rel="noopener">PDF</a>
     {{ else if .Params.pdf }}
-      <a class="ml-2 text-blue-600 hover:underline" href="{{ .Params.pdf }}" target="_blank" rel="noopener">PDF</a>
+      <a class="ml-2 inline-block px-2 py-1 text-sm font-medium text-white bg-blue-600 rounded hover:bg-blue-700" href="{{ .Params.pdf }}" target="_blank" rel="noopener">PDF</a>
     {{ end }}
   </p>
 </article>
