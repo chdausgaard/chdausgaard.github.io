@@ -3,7 +3,13 @@
 
   <section>
     <h2 class="text-2xl font-bold mb-4">Published Journal Articles</h2>
-    {{ $journal := where .Site.RegularPages "File.Path" "match" "^publication/journal/" }}
+    {{ $pub := where .Site.RegularPages "Section" "publication" }}
+    {{ $journal := slice }}
+    {{ range $pub }}
+      {{ if strings.HasPrefix .File.Path "publication/journal/" }}
+        {{ $journal = $journal | append . }}
+      {{ end }}
+    {{ end }}
     {{ range $journal }}
       {{ partial "publication-card.html" . }}
     {{ end }}
@@ -11,7 +17,12 @@
 
   <section>
     <h2 class="text-2xl font-bold mb-4">Working Papers</h2>
-    {{ $working := where .Site.RegularPages "File.Path" "match" "^publication/working/" }}
+    {{ $working := slice }}
+    {{ range $pub }}
+      {{ if strings.HasPrefix .File.Path "publication/working/" }}
+        {{ $working = $working | append . }}
+      {{ end }}
+    {{ end }}
     {{ range $working }}
       {{ partial "publication-card.html" . }}
     {{ end }}
@@ -19,7 +30,12 @@
 
   <section>
     <h2 class="text-2xl font-bold mb-4">Book Chapters</h2>
-    {{ $chapters := where .Site.RegularPages "File.Path" "match" "^publication/chapters/" }}
+    {{ $chapters := slice }}
+    {{ range $pub }}
+      {{ if strings.HasPrefix .File.Path "publication/chapters/" }}
+        {{ $chapters = $chapters | append . }}
+      {{ end }}
+    {{ end }}
     {{ range $chapters }}
       {{ partial "publication-card.html" . }}
     {{ end }}
