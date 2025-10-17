@@ -6,7 +6,7 @@
     {{ if $listPage.IsHome }}
       {{ partial "publication-citation.html" . }}
 
-    {{/* Publications list page: use the full card (content/publication/_index.md) */}}
+    {{/* Publications section page (content/publication/_index.md): show full card */}}
     {{ else if eq $listPage.Section "publication" }}
       {{ partial "publication-card.html" . }}
 
