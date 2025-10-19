@@ -1,4 +1,4 @@
-<article class="border rounded-2xl p-4 shadow-sm mb-6 bg-white">
+<article class="border rounded-2xl py-4 pr-4 pl-6 shadow-sm mb-6 bg-white">
   
   <!-- Title -->
   <h3 class="text-xl font-semibold mb-2">{{ .Title }}</h3>
@@ -12,10 +12,7 @@
     </p>
   {{ end }}
 
-  <!-- Date -->
-  {{ with .Date }}
-    <p class="text-gray-500 text-sm mb-2">{{ .Format "January 2, 2006" }}</p>
-  {{ end }}
+  <!-- Date removed (design choice) -->
 
   <!-- Publication type/venue -->
   {{ with .Params.publication }}

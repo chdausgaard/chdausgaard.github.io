@@ -2,7 +2,7 @@
 <div class="space-y-10">
 
   <section>
-    <h2 class="text-2xl font-bold mb-4">Journal Articles</h2>
+  <h2 class="text-2xl font-bold mb-4 pl-6">Journal Articles</h2>
     {{ $pub := where .Site.RegularPages "Section" "publication" }}
     {{ $journal := slice }}
     {{ range $pub }}
@@ -16,7 +16,7 @@
   </section>
 
   <section>
-    <h2 class="text-2xl font-bold mb-4">Working Papers</h2>
+  <h2 class="text-2xl font-bold mb-4 pl-6">Working Papers</h2>
     {{ $working := slice }}
     {{ range $pub }}
       {{ if strings.HasPrefix .File.Path "publication/working/" }}
@@ -29,7 +29,7 @@
   </section>
 
   <section>
-    <h2 class="text-2xl font-bold mb-4">Book Chapters</h2>
+  <h2 class="text-2xl font-bold mb-4 pl-6">Book Chapters</h2>
     {{ $chapters := slice }}
     {{ range $pub }}
       {{ if strings.HasPrefix .File.Path "publication/chapters/" }}
