@@ -84,3 +84,15 @@
   opacity: 1 !important;
   visibility: visible !important;
 }
+
+/* Ensure author/portrait avatar images remain square (not circular) */
+/* Theme may set avatar shape via params or utility classes; enforce square here */
+.author-avatar img,
+.author .avatar,
+img.avatar,
+.profile-avatar img,
+.author-image img {
+  border-radius: 0 !important;
+  overflow: visible !important;
+  object-fit: cover !important; /* keep image filling the square */
+}
