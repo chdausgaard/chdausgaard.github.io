@@ -11,4 +11,6 @@ abstract: "Parties' linkages to social groups are key to electoral competition. 
 tags: social groups, party politics, political communication
 featured: false
 featured_graph: "graph1.png"
+url_pdf: content/publication/journal/running_tally/paper.pdf
+
 ---
