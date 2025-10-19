@@ -11,14 +11,14 @@
 /* Further narrow the main content column (the col-lg-8) */
 @media (min-width: 992px) {
   .col-lg-8 {
-    max-width: 500px !important;  /* smaller width for text column */
+    max-width: 600px !important;  /* smaller width for text column */
   }
 }
 
 /* Optional: narrow just the article text wrapper */
 @media (min-width: 992px) {
   .article-style {
-    max-width: 400px !important;
+    max-width: 500px !important;
     margin: 0 auto !important;
   }
 }
