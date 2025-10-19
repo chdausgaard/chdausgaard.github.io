@@ -1,4 +1,22 @@
-<article class="publication mb-8">
+<article class="publication py-4">
+  <!-- Optional image: checks .Params.featured_graph, .Params.featured_image, then first image in bundle -->
+  {{ $img := $.Resources.GetMatch .Params.featured_graph }}
+  {{ if not $img }}
+    {{ $img = $.Resources.GetMatch .Params.featured_image }}
+  {{ end }}
+  {{ if not $img }}
+    {{ $imgs := $.Resources.Match "*.{png,jpg,jpeg,webp}" }}
+    {{ if gt (len $imgs) 0 }}
+      {{ $img = index $imgs 0 }}
+    {{ end }}
+  {{ end }}
+
+  {{ if $img }}
+    <p class="mb-3">
+      <img src="{{ $img.RelPermalink }}" alt="Image for {{ .Title }}" class="w-full max-w-md object-contain rounded-md">
+    </p>
+  {{ end }}
+
   <!-- Title -->
   <h3 class="text-xl font-semibold mb-1">{{ .Title }}</h3>
 
@@ -19,8 +37,15 @@
     <div class="pub-abstract text-gray-800">{{ .Content }}</div>
   {{ end }}
 
-  <!-- Simple PDF link if present in page bundle -->
+  <!-- Latest version PDF link (page bundle) -->
   {{ with $.Resources.GetMatch "*.pdf" }}
-    <p class="mt-2"><a href="{{ .RelPermalink }}" target="_blank" rel="noopener">PDF</a></p>
+    <p class="mt-3">
+      <a href="{{ .RelPermalink }}" class="inline-flex items-center px-3 py-1.5 bg-gray-800 text-white rounded hover:bg-gray-700" target="_blank" rel="noopener" download>
+        Latest version
+      </a>
+    </p>
   {{ end }}
+
+  <!-- thin grey separator -->
+  <hr class="border-t border-gray-300 mt-6">
 </article>

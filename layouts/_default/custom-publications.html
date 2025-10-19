@@ -22,7 +22,7 @@
       <h2 class="text-2xl font-bold mb-4 pl-6">Working Papers</h2>
       {{ $working := slice }}
       {{ range $pub }}
-        {{ if strings.HasPrefix .File.Path "publication/working/" }}
+        {{ if strings.HasPrefix ..File.Path "publication/working/" }}
           {{ $working = $working | append . }}
         {{ end }}
       {{ end }}
