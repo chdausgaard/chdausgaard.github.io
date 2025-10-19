@@ -2,43 +2,49 @@
 <div class="space-y-10">
 
   <section>
-  <h2 class="text-2xl font-bold mb-4 pl-6">Journal Articles</h2>
-    {{ $pub := where .Site.RegularPages "Section" "publication" }}
-    {{ $journal := slice }}
-    {{ range $pub }}
-      {{ if strings.HasPrefix .File.Path "publication/journal/" }}
-        {{ $journal = $journal | append . }}
+    <div class="container mx-auto max-w-screen-lg px-8 xl:px-5">
+      <h2 class="text-2xl font-bold mb-4 pl-6">Journal Articles</h2>
+      {{ $pub := where .Site.RegularPages "Section" "publication" }}
+      {{ $journal := slice }}
+      {{ range $pub }}
+        {{ if strings.HasPrefix .File.Path "publication/journal/" }}
+          {{ $journal = $journal | append . }}
+        {{ end }}
       {{ end }}
-    {{ end }}
-    {{ range $journal }}
-      {{ partial "publication-card.html" . }}
-    {{ end }}
+      {{ range $journal }}
+        {{ partial "publication-card.html" . }}
+      {{ end }}
+    </div>
   </section>
 
   <section>
-  <h2 class="text-2xl font-bold mb-4 pl-6">Working Papers</h2>
-    {{ $working := slice }}
-    {{ range $pub }}
-      {{ if strings.HasPrefix .File.Path "publication/working/" }}
-        {{ $working = $working | append . }}
+    <div class="container mx-auto max-w-screen-lg px-8 xl:px-5">
+      <h2 class="text-2xl font-bold mb-4 pl-6">Working Papers</h2>
+      {{ $working := slice }}
+      {{ range $pub }}
+        {{ if strings.HasPrefix .File.Path "publication/working/" }}
+          {{ $working = $working | append . }}
+        {{ end }}
       {{ end }}
-    {{ end }}
-    {{ range $working }}
-      {{ partial "publication-card.html" . }}
-    {{ end }}
+      {{ range $working }}
+        {{ partial "publication-card.html" . }}
+      {{ end }}
+    </div>
   </section>
 
   <section>
-  <h2 class="text-2xl font-bold mb-4 pl-6">Book Chapters</h2>
-    {{ $chapters := slice }}
-    {{ range $pub }}
-      {{ if strings.HasPrefix .File.Path "publication/chapters/" }}
-        {{ $chapters = $chapters | append . }}
+    <div class="container mx-auto max-w-screen-lg px-8 xl:px-5">
+      <h2 class="text-2xl font-bold mb-4 pl-6">Book Chapters</h2>
+      {{ $chapters := slice }}
+      {{ range $pub }}
+        {{ if strings.HasPrefix .File.Path "publication/chapters/" }}
+          {{ $chapters = $chapters | append . }}
+        {{ end }}
       {{ end }}
-    {{ end }}
-    {{ range $chapters }}
-      {{ partial "publication-card.html" . }}
-    {{ end }}
+      {{ range $chapters }}
+        {{ partial "publication-card.html" . }}
+      {{ end }}
+    </div>
   </section>
 
 </div>
