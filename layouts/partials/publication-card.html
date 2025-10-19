@@ -1,5 +1,19 @@
 <article class="publication py-4">
-  <!-- Optional image: checks .Params.featured_graph, .Params.featured_image, then first image in bundle -->
+  <!-- Title -->
+  <h3 class="text-xl font-semibold mb-1">{{ .Title }}</h3>
+
+  <!-- Authors (comma-separated) -->
+  {{ with .Params.authors }}
+    <p class="text-gray-700 mb-1">{{ delimit . ", " }}</p>
+  {{ end }}
+
+  <!-- Venue / journal (italic) -->
+  {{ with .Params.publication }}
+    <p class="text-gray-600 mb-2"><em>{{ . | safeHTML }}</em></p>
+  {{ end }}
+
+  <!-- Optional image: checks .Params.featured_graph, .Params.featured_image, then first image in bundle
+       (Placed here so it appears just above the abstract) -->
   {{ $img := $.Resources.GetMatch .Params.featured_graph }}
   {{ if not $img }}
     {{ $img = $.Resources.GetMatch .Params.featured_image }}
@@ -12,22 +26,10 @@
   {{ end }}
 
   {{ if $img }}
-    <p class="mb-3">
-      <img src="{{ $img.RelPermalink }}" alt="Image for {{ .Title }}" class="w-full max-w-md object-contain rounded-md">
-    </p>
-  {{ end }}
-
-  <!-- Title -->
-  <h3 class="text-xl font-semibold mb-1">{{ .Title }}</h3>
-
-  <!-- Authors (comma-separated) -->
-  {{ with .Params.authors }}
-    <p class="text-gray-700 mb-1">{{ delimit . ", " }}</p>
-  {{ end }}
-
-  <!-- Venue / journal (italic) -->
-  {{ with .Params.publication }}
-    <p class="text-gray-600 mb-2"><em>{{ . | safeHTML }}</em></p>
+    <figure class="mb-3">
+      <!-- responsive: full width on small screens, 1/2 width (50%) on md+ screens -->
+      <img src="{{ $img.RelPermalink }}" alt="Image for {{ .Title }}" class="w-full md:w-1/2 mx-auto mb-3 object-contain rounded-md">
+    </figure>
   {{ end }}
 
   <!-- Full abstract (prefer frontmatter.abstract, fallback to page content) -->
