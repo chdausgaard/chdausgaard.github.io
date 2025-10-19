@@ -3,12 +3,10 @@ title: Research
 cms_exclude: true
 
 # View.
-#   1 = List
-#   2 = Compact
-#   3 = Card
-#   4 = Citation
-# view: 2
-# filter: false
+# Choose a native or custom view. For our custom community view set:
+view: community/compact-card
+columns: 2
+filter: false
 
 # Optional header image (relative to `static/media/` folder).
 # banner:

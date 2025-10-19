@@ -1,0 +1,61 @@
+{{/*
+  community/compact-card view
+  - Title (bold)
+  - Publication line (publication or 'Working paper')
+  - Authors
+  - Figure / featured image
+  - Full abstract
+  - Attachment buttons (pdf, code, dataset, etc.)
+*/}}
+
+{{ $item := .item }}
+{{ $page := .page }}
+{{ $index := .index }}
+{{ $config := .config | default dict }}
+
+<article class="prose max-w-none bg-white dark:bg-zinc-900 rounded-xl shadow-sm p-6">
+
+  <!-- Title -->
+  <h3 class="text-xl font-bold mb-2">{{ with $item.Params.title }}{{ . | markdownify | plainify }}{{ else }}{{ $item.Title }}{{ end }}</h3>
+
+  <!-- Publication line: publication or working paper -->
+  <div class="text-sm text-zinc-600 dark:text-zinc-400 mb-2">
+    {{ if $item.Params.publication }}
+      {{ $item.Params.publication | markdownify | plainify }}
+    {{ else if in $item.File.Path "publication/working/" }}
+      <em>Working paper</em>
+    {{ else if $item.Params.publication_short }}
+      {{ $item.Params.publication_short | markdownify | plainify }}
+    {{ end }}
+  </div>
+
+  <!-- Authors -->
+  <div class="text-sm text-zinc-700 dark:text-zinc-300 mb-3">
+    {{ partial "page_metadata_authors" $item }}
+  </div>
+
+  <!-- Figure / featured image -->
+  <div class="mb-4">
+    {{ $resource := partial "functions/get_featured_image.html" $item }}
+    {{ if $resource }}
+      <div class="overflow-hidden rounded-md">
+        <img src="{{ $resource.RelPermalink }}" alt="{{ $item.Title }}" class="w-full h-auto object-cover" loading="lazy" decoding="async" />
+      </div>
+    {{ end }}
+  </div>
+
+  <!-- Full abstract -->
+  {{ with $item.Params.abstract }}
+    <div class="text-base text-zinc-700 dark:text-zinc-300 mb-4">{{ . | markdownify }}</div>
+  {{ else if $item.Params.summary }}
+    <div class="text-base text-zinc-700 dark:text-zinc-300 mb-4">{{ $item.Params.summary | markdownify }}</div>
+  {{ else }}
+    <div class="text-base text-zinc-700 dark:text-zinc-300 mb-4">{{ $item.Summary }}</div>
+  {{ end }}
+
+  <!-- Attachment buttons (reuse page_links partial) -->
+  <div class="flex flex-wrap gap-3 mt-2">
+    {{ partial "page_links" (dict "page" $item "is_list" 0) }}
+  </div>
+
+</article>

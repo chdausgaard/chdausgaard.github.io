@@ -1,0 +1,4 @@
+{{/* Start fragment for community/compact-card view */}}
+{{ $columns := .config.columns | default 1 }}
+<div class="container mx-auto my-6 px-4 lg:px-8 {{ if eq $columns 1 }}max-w-3xl{{else}}max-w-screen-lg{{end}}">
+  <div class="grid gap-8 {{ if eq $columns 1 }}grid-cols-1{{else}}md:grid-cols-{{$columns}}{{end}}">
