@@ -22,7 +22,7 @@
   <div class="text-sm text-zinc-600 dark:text-zinc-400 mb-2">
     {{ if $item.Params.publication }}
       {{ $item.Params.publication | markdownify | plainify }}
-    {{ else if in $item.File.Path "publication/working/" }}
+    {{ else if strings.HasPrefix $item.File.Path "publication/working/" }}
       <em>Working paper</em>
     {{ else if $item.Params.publication_short }}
       {{ $item.Params.publication_short | markdownify | plainify }}
