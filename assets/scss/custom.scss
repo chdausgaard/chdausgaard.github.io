@@ -22,3 +22,25 @@
     margin: 0 auto !important;
   }
 }
+
+/* Add this to the end of your custom.scss (or layout-adjust.css) */
+
+/* Ensure publication images are full-width on small screens, ~50% on md+ */
+.publication figure img,
+.publication img {
+  display: block;
+  margin: 0.5rem auto;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  object-fit: contain;
+}
+
+/* At medium screens and up, make images about half the text width */
+@media (min-width: 768px) {
+  .publication figure img,
+  .publication img {
+    width: 50% !important;      /* change to 40% or 33% if you want smaller */
+    max-width: 50% !important;
+  }
+}
