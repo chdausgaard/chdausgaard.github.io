@@ -1,7 +1,7 @@
 ---
 title: "Voters' sympathies with social groups. An overlooked factor behind party choice"
 authors:
-- Christoffer Hentzer Dausgaard
+- Christoffer H. Dausgaard
 - Rune Stubager
 date: 2024-05-01
 publishDate: '2024-05-18T19:09:55.113684Z'

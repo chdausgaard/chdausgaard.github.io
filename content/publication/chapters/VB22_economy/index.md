@@ -1,8 +1,8 @@
 ---
 title: "The Poor Economy Helped the Government. Price Increases, the ‘Heating Check’ and Support for the Social Democrats"
 authors:
-- Christoffer Hentzer Dausgaard
-- Martin Vinæs
+- Christoffer H. Dausgaard
+- Martin Vinæs Larsen
 date: 2024-01-01
 publishDate: '2024-05-18T19:09:55.120247Z'
 publication: 'Partiledernes Kamp Om Midten: Folketingsvalget 2022'
