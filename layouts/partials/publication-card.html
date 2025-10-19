@@ -1,4 +1,4 @@
-<article class="border rounded-2xl py-4 pr-4 pl-6 shadow-sm mb-6 bg-white">
+<article class="border rounded-2xl py-4 pr-6 pl-6 shadow-sm mb-6 bg-white">
   
   <!-- Title -->
   <h3 class="text-xl font-semibold mb-2">{{ .Title }}</h3>
@@ -26,7 +26,7 @@
 
   <!-- Featured Graph -->
   {{ with .Resources.GetMatch .Params.featured_graph }}
-  <img src="{{ .RelPermalink }}" alt="Graph for {{ $.Title }}" class="rounded-xl shadow mb-3">
+  <img src="{{ .RelPermalink }}" alt="Graph for {{ $.Title }}" class="rounded-xl mb-3 w-1/2">
 {{ end }}
 
   <!-- PDF download (first PDF in page bundle) -->
