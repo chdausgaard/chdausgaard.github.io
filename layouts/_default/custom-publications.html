@@ -11,7 +11,7 @@
           {{ $journal = $journal | append . }}
         {{ end }}
       {{ end }}
-      {{ range $journal }}
+      {{ range $journal.ByDate.Reverse }}
         {{ partial "publication-card.html" . }}
       {{ end }}
     </div>
@@ -26,7 +26,7 @@
           {{ $working = $working | append . }}
         {{ end }}
       {{ end }}
-      {{ range $working }}
+      {{ range $working.ByDate.Reverse }}
         {{ partial "publication-card.html" . }}
       {{ end }}
     </div>
@@ -41,7 +41,7 @@
           {{ $chapters = $chapters | append . }}
         {{ end }}
       {{ end }}
-      {{ range $chapters }}
+      {{ range $chapters.ByDate.Reverse }}
         {{ partial "publication-card.html" . }}
       {{ end }}
     </div>
