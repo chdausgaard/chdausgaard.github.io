@@ -1,15 +1,15 @@
-<article class="publication py-4">
+<article class="publication py-2">
   <!-- Title -->
   <h3 class="text-xl font-semibold mb-1">{{ .Title }}</h3>
 
   <!-- Authors (comma-separated) -->
   {{ with .Params.authors }}
-    <p class="text-gray-700 mb-1">{{ delimit . ", " }}</p>
+    <p class="text-gray-700 mb-0">{{ delimit . ", " }}</p>
   {{ end }}
 
   <!-- Venue / journal (italic) -->
   {{ with .Params.publication }}
-    <p class="text-gray-600 mb-2"><em>{{ . | safeHTML }}</em></p>
+    <p class="text-gray-600 mb-1"><em>{{ . | safeHTML }}</em></p>
   {{ end }}
 
   <!-- Optional image: checks .Params.featured_graph, .Params.featured_image, then first image in bundle -->
@@ -25,8 +25,8 @@
   {{ end }}
 
   {{ if $img }}
-    <figure class="mb-3">
-      <img src="{{ $img.RelPermalink }}" alt="Image for {{ .Title }}" class="w-full md:w-1/2 mx-auto mb-3 object-contain rounded-md">
+    <figure class="mb-2">
+      <img src="{{ $img.RelPermalink }}" alt="Image for {{ .Title }}" class="w-full md:w-1/2 mx-auto mb-2 object-contain rounded-md">
     </figure>
   {{ end }}
 
@@ -40,7 +40,7 @@
   <!-- Latest version PDF link: ONLY use the first PDF in the CURRENT PAGE BUNDLE -->
   {{ $bundlePDF := .Resources.GetMatch "*.pdf" }}
   {{ if $bundlePDF }}
-    <p class="mt-3">
+    <p class="mt-2">
       <a href="{{ $bundlePDF.RelPermalink }}" class="pub-download-button inline-flex items-center" target="_blank" rel="noopener" download aria-label="Download latest version of {{ .Title }}">
         Latest version
       </a>
@@ -48,5 +48,5 @@
   {{ end }}
 
   <!-- thin grey separator -->
-  <hr class="border-t border-gray-300 mt-6">
+  <hr class="border-t border-gray-300 mt-4">
 </article>

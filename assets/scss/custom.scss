@@ -45,42 +45,40 @@
   }
 }
 
-/* Publication PDF button visibility & styling override.
-   Put this at the end of your custom stylesheet so it wins. */
-
+/* Publication PDF button: white fill, black text, subtle border */
 .pub-download-button {
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
   padding: 0.375rem 0.75rem !important; /* matches px-3 py-1.5 */
-  background-color: #111111 !important;   /* dark background */
-  color: #ffffff !important;              /* white text */
+  background-color: #ffffff !important;   /* white background */
+  color: #111111 !important;              /* black text */
   text-decoration: none !important;
   border-radius: 0.375rem !important;     /* rounded */
-  box-shadow: 0 1px 0 rgba(0,0,0,0.05) !important;
+  border: 1px solid rgba(0,0,0,0.08) !important; /* subtle border */
+  box-shadow: 0 1px 0 rgba(0,0,0,0.02) !important;
   opacity: 1 !important;
   visibility: visible !important;
   pointer-events: auto !important;
-  border: none !important;
 }
 
-/* Hover / focus states */
+/* Hover / focus states: slightly darker border / light gray background */
 .pub-download-button:hover,
 .pub-download-button:focus {
-  background-color: #333333 !important;
-  color: #ffffff !important;
+  background-color: #f7f7f7 !important;
+  color: #000000 !important;
   outline: none !important;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08) !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04) !important;
+  border-color: rgba(0,0,0,0.12) !important;
 }
 
-/* Ensure no nested icon or pseudo-element is hiding text */
+/* Ensure children inherit color and remain visible */
 .pub-download-button * {
   color: inherit !important;
   opacity: 1 !important;
 }
 
-/* Defensive rule: in case the anchor is inside an element with opacity 0,
-   ensure immediate ancestors used for the button are visible (scoped narrowly) */
+/* Defensive rule: ensure anchor and immediate parents are visible */
 .publication p a.pub-download-button,
 .publication p a.pub-download-button * {
   opacity: 1 !important;
