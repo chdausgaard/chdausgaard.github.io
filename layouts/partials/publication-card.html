@@ -1,0 +1,33 @@
+{{/*
+  Local publication-card partial to mirror upstream behavior.
+  This delegates to the custom view set in the page bundle or site params.
+*/}}
+{{ $item := . }}
+
+{{/* Determine view prefix: if page defines .Params.view use that, else use site default */}}
+{{ $view := cond (isset $item.Params "view") $item.Params.view "community/compact-card" }}
+
+{{/* Render start fragment if present */}}
+{{ $start := printf "partials/views/%s--start.html" $view }}
+{{ if partialExists (printf "views/%s--start.html" $view) }}
+  {{ partial (printf "views/%s--start.html" $view) $item }}
+{{ end }}
+
+{{/* Render main fragment */}}
+{{ if partialExists (printf "views/%s.html" $view) }}
+  {{ partial (printf "views/%s.html" $view) $item }}
+{{ else }}
+  <div class="border rounded p-4 mb-4">
+    <h3 class="text-xl font-semibold">{{ $item.Title }}</h3>
+    {{ if $item.Params.abstract }}
+      <div class="mt-2 text-sm">{{ $item.Params.abstract | markdownify }}</div>
+    {{ else }}
+      <div class="mt-2 text-sm">{{ $item.Summary }}</div>
+    {{ end }}
+  </div>
+{{ end }}
+
+{{/* Render end fragment if present */}}
+{{ if partialExists (printf "views/%s--end.html" $view) }}
+  {{ partial (printf "views/%s--end.html" $view) $item }}
+{{ end }}
