@@ -3,7 +3,7 @@
 /* Narrow the main container at large screen widths */
 @media (min-width: 992px) {   /* adjust breakpoint if needed */
   .container {
-    max-width: 500px !important;  /* choose your desired width */
+    max-width: 700px !important;  /* choose your desired width */
     margin: 0 auto !important;
   }
 }
@@ -11,14 +11,14 @@
 /* Further narrow the main content column (the col-lg-8) */
 @media (min-width: 992px) {
   .col-lg-8 {
-    max-width: 300px !important;  /* smaller width for text column */
+    max-width: 500px !important;  /* smaller width for text column */
   }
 }
 
 /* Optional: narrow just the article text wrapper */
 @media (min-width: 992px) {
   .article-style {
-    max-width: 300px !important;
+    max-width: 400px !important;
     margin: 0 auto !important;
   }
 }
