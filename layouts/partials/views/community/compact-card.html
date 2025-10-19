@@ -45,8 +45,8 @@
   </div>
 
   <!-- Full abstract -->
-  {{ with $item.Params.abstract }}
-    <div class="text-base text-zinc-700 dark:text-zinc-300 mb-4">{{ . | markdownify }}</div>
+  {{ if $item.Params.abstract }}
+    <div class="text-base text-zinc-700 dark:text-zinc-300 mb-4">{{ $item.Params.abstract | markdownify }}</div>
   {{ else if $item.Params.summary }}
     <div class="text-base text-zinc-700 dark:text-zinc-300 mb-4">{{ $item.Params.summary | markdownify }}</div>
   {{ else }}
