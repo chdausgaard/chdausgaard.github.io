@@ -1,6 +1,5 @@
-{{/* Hugo Blox: About (override) */}}
-{{/* This override hides the author name/role/organization on the homepage while
-   preserving the rest of the about widget (avatar, social icons, bio, etc.). */}}
+{{/* Hugo Blox: About (widget-only portrait mode when used as a widget) */}}
+{{/* Documentation: https://hugoblox.com/blocks/ */}}
 
 {{/* Initialise */}}
 {{ $page := .wcPage }}
@@ -22,7 +21,7 @@
 {{ $avatar := ($person_page.Resources.ByType "image").GetMatch "*avatar*" }}
 {{ $avatar_shape := site.Params.features.avatar.shape | default "circle" }}
 
-<!-- About widget (override) -->
+<!-- About widget -->
 <div class="row">
   <div class="col-12 col-lg-4">
     <div id="profile">
@@ -36,32 +35,30 @@
            src="{{ $avatar_image.RelPermalink }}" alt="{{$person_page.Title}}">
       {{ end }}
 
+      {{/* Portrait title and orgs: only show when NOT in widget mode (i.e., on author pages) */}}
+      {{ if not $block.Params.widget }}
       <div class="portrait-title">
 
-        {{/* Hide the visible name/role/org on the homepage only. Keep frontmatter for SEO. */}}
-  {{ if not $.Page.IsHome }}
-          <h2>
-            {{- if $person.name_pronunciation -}}
-              <ruby>
-                <rb>{{ $person_page.Title }}</rb>
-                <rt>{{ $person.name_pronunciation }}</rt>
-              </ruby>
-            {{- else -}}
-              {{- $person_page.Title -}}
-            {{- end -}}
-          </h2>
+        <h2>
+          {{- if $person.name_pronunciation -}}
+            <ruby>
+              <rb>{{ $person_page.Title }}</rb>
+              <rt>{{ $person.name_pronunciation }}</rt>
+            </ruby>
+          {{- else -}}
+            {{- $person_page.Title -}}
+          {{- end -}}
+        </h2>
 
-          {{ with $person.role }}<h3>{{ . | markdownify | emojify }}</h3>{{ end }}
+        {{ with $person.role }}<h3>{{ . | markdownify | emojify }}</h3>{{ end }}
 
-          {{ range $person.organizations }}
-          <h3>
-            {{ with .url }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end }}
-            <span>{{ .name }}</span>
-            {{ if .url }}</a>{{ end }}
-          </h3>
-          {{ end }}
+        {{ range $person.organizations }}
+        <h3>
+          {{ with .url }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end }}
+          <span>{{ .name }}</span>
+          {{ if .url }}</a>{{ end }}
+        </h3>
         {{ end }}
-
       </div>
 
       <ul class="network-icon" aria-hidden="true">
@@ -86,9 +83,13 @@
         </li>
         {{ end }}
       </ul>
+      {{ end }}
 
     </div>
   </div>
+
+  {{/* Right column (bio, interests, education, etc.) — only render when NOT a widget */}}
+  {{ if not $block.Params.widget }}
   <div class="col-12 col-lg-8">
 
     {{/* Only display widget title in explicit instances of about widget, not in author pages. */}}
@@ -130,4 +131,5 @@
 
     </div>
   </div>
+  {{ end }}
 </div>
