@@ -39,7 +39,7 @@
       <div class="portrait-title">
 
         {{/* Hide the visible name/role/org on the homepage only. Keep frontmatter for SEO. */}}
-        {{ if not $page.IsHome }}
+  {{ if not $.Page.IsHome }}
           <h2>
             {{- if $person.name_pronunciation -}}
               <ruby>
