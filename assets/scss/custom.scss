@@ -140,20 +140,40 @@ section#about #profile .network-icon li {
   visibility: hidden !important;
 }
 
-/* Contact page: remove left offset/indent so lines align with H1 and the normal page margin */
-section#contact .universal-wrapper,
+/* CONTACT PAGE: force article content to align with H1 / page margin
+   Append this to the end of static/css/layout-adjust.css */
+
+section#contact,
 section#contact .container,
-section#contact .article-style {
+section#contact .universal-wrapper,
+section#contact .universal-wrapper .universal-wrapper {
   padding-left: 0 !important;
+  padding-right: 0 !important;
   margin-left: 0 !important;
-  width: 100% !important;
+  margin-right: 0 !important;
   max-width: none !important;
+  width: 100% !important;
   box-sizing: border-box !important;
 }
 
-/* In case there are column/grid rules forcing a left column, collapse it for the contact page */
-section#contact .row > .col-md-*, 
-section#contact .row > [class*="col-"] {
+/* Target the exact nested article-style element shown in your DOM */
+section#contact .universal-wrapper .universal-wrapper > .article-style,
+section#contact div.universal-wrapper > div.universal-wrapper > div.article-style,
+body#top.page-wrapper section#contact .article-style {
+  margin: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  width: auto !important;
+  max-width: none !important;
+  float: none !important;
+  display: block !important;
+}
+
+/* Collapse any left column/grid that might be reserving space */
+section#contact .row > [class*="col-"],
+section#contact .row > [class*="col-"] > .article-style {
   float: none !important;
   display: block !important;
   width: 100% !important;
@@ -161,7 +181,7 @@ section#contact .row > [class*="col-"] {
   padding: 0 !important;
 }
 
-/* Tidy vertical spacing for the contact paragraphs */
+/* Tighten vertical spacing for contact lines */
 section#contact .article-style p {
   margin: 0.25rem 0 !important;
   padding: 0 !important;
