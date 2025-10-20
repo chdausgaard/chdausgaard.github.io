@@ -140,6 +140,16 @@ section#about #profile .network-icon li {
   visibility: hidden !important;
 }
 
+/* Hide the visible page title on the contact page while keeping the title in frontmatter for SEO */
+/* Primary selector: section#contact — matches the About selector pattern you've used */
+section#contact h1,
+section#contact .page-title,
+section#contact .page-header,
+body.page-contact h1,
+.page-contact .page-title {
+  display: none !important;
+}
+
 /* If you previously added rules that forcibly show .network-icon (e.g. display:flex),
    remove or comment them out so this hide rule can take effect. */
 
