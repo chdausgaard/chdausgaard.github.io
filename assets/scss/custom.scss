@@ -124,3 +124,32 @@ body.home #profile { margin-bottom: 0.5rem !important; }
 
 /* small spacing after avatar */
 .page-body #profile { margin-bottom: 0.5rem !important; }
+
+/* Restore bio/networking but keep only the portrait title hidden on the front page.
+   Place this at the end of static/css/layout-adjust.css so it overrides earlier rules. */
+
+/* Hide only the portrait title block (name / role / org) */
+.page-body #profile .portrait-title {
+  display: none !important;
+}
+
+/* Ensure networking icons are visible */
+.page-body #profile .network-icon {
+  display: flex !important;
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Ensure the right column (bio / article-style / interests / education) is visible */
+.page-body .row > .col-lg-8,
+.page-body .article-style {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Small spacing under the portrait */
+.page-body #profile {
+  margin-bottom: 0.5rem !important;
+}
