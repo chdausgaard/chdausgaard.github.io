@@ -140,51 +140,30 @@ section#about #profile .network-icon li {
   visibility: hidden !important;
 }
 
-/* CONTACT PAGE: force article content to align with H1 / page margin
-   Append this to the end of static/css/layout-adjust.css */
+/* CONTACT PAGE: match the actual DOM structure and override centering on .article-style */
 
-section#contact,
-section#contact .container,
-section#contact .universal-wrapper,
-section#contact .universal-wrapper .universal-wrapper {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  max-width: none !important;
-  width: 100% !important;
-  box-sizing: border-box !important;
-}
-
-/* Target the exact nested article-style element shown in your DOM */
-section#contact .universal-wrapper .universal-wrapper > .article-style,
-section#contact div.universal-wrapper > div.universal-wrapper > div.article-style,
-body#top.page-wrapper section#contact .article-style {
+/* Exact nested wrapper variant shown in your DOM */
+body#top.page-wrapper div.page-body div.universal-wrapper.pt-3 div.universal-wrapper > div.article-style,
+body#top.page-wrapper div.page-body div.universal-wrapper div.universal-wrapper > div.article-style,
+.page-body div.universal-wrapper.pt-3 div.universal-wrapper > div.article-style,
+.page-body div.universal-wrapper div.universal-wrapper > div.article-style,
+.page-body > .universal-wrapper > .universal-wrapper > .article-style {
   margin: 0 !important;
   margin-left: 0 !important;
   margin-right: 0 !important;
   padding-left: 0 !important;
   padding-right: 0 !important;
-  width: auto !important;
+  width: 100% !important;
   max-width: none !important;
   float: none !important;
   display: block !important;
 }
 
-/* Collapse any left column/grid that might be reserving space */
-section#contact .row > [class*="col-"],
-section#contact .row > [class*="col-"] > .article-style {
-  float: none !important;
-  display: block !important;
-  width: 100% !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-/* Tighten vertical spacing for contact lines */
-section#contact .article-style p {
-  margin: 0.25rem 0 !important;
-  padding: 0 !important;
+/* Backup: if any generic .article-style centering remains, override it (site-wide - last resort) */
+.article-style {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: none !important;
 }
 
 /* If you previously added rules that forcibly show .network-icon (e.g. display:flex),
