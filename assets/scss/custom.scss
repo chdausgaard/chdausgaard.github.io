@@ -96,3 +96,20 @@ img.avatar,
   overflow: visible !important;
   object-fit: cover !important; /* keep image filling the square */
 }
+
+/* FRONT PAGE: show only avatar for the About widget */
+
+/* Prefer this selector if your site body has class "home" (common Hugo theme) */
+body.home #profile .portrait-title,
+body.home #profile .network-icon,
+body.home .row > .col-lg-8 {
+  display: none !important;
+}
+
+/* Fallback if your homepage body class is "index" or "page-home" — uncomment one if needed */
+/* body.index #profile .portrait-title, body.index #profile .network-icon, body.index .row > .col-lg-8 { display:none !important; } */
+/* .page-home #profile .portrait-title, .page-home #profile .network-icon, .page-home .row > .col-lg-8 { display:none !important; } */
+
+/* If you want a tiny caption or spacing adjustment after hiding the right column,
+   add a little vertical spacing under the portrait: */
+body.home #profile { margin-bottom: 0.5rem !important; }
