@@ -1,31 +1,34 @@
-/* custom.scss — override widths for main content in your Wowchemy site */
+/* layout-adjust.css
+   Consolidated overrides for site widths, publication images, avatar, About-widget small tweaks,
+   and the "Latest version" PDF button.
+*/
 
-/* Narrow the main container at large screen widths */
-@media (min-width: 992px) {   /* adjust breakpoint if needed */
+/* -------------------------
+   Container / content widths
+   ------------------------- */
+@media (min-width: 992px) {
   .container {
-    max-width: 992px !important;  /* choose your desired width */
+    max-width: 992px !important;
     margin: 0 auto !important;
   }
-}
 
-/* Further narrow the main content column (the col-lg-8) */
-@media (min-width: 992px) {
+  /* Main text column */
   .col-lg-8 {
-    max-width: 700px !important;  /* smaller width for text column */
+    max-width: 700px !important;
   }
-}
 
-/* Optional: narrow just the article text wrapper */
-@media (min-width: 992px) {
+  /* Optional: article text wrapper */
   .article-style {
     max-width: 600px !important;
     margin: 0 auto !important;
   }
 }
 
-/* Add this to the end of your custom.scss (or layout-adjust.css) */
-
-/* Ensure publication images are full-width on small screens, ~50% on md+ */
+/* -------------------------
+   Publication images
+   - full width on small screens
+   - ~50% of content width on md+ screens (change 50% to 40%/33% as desired)
+   ------------------------- */
 .publication figure img,
 .publication img {
   display: block;
@@ -36,33 +39,34 @@
   object-fit: contain;
 }
 
-/* At medium screens and up, make images about half the text width */
 @media (min-width: 768px) {
   .publication figure img,
   .publication img {
-    width: 75% !important;      /* change to 40% or 33% if you want smaller */
-    max-width: 80% !important;
+    width: 50% !important;    /* set desktop image width here */
+    max-width: 50% !important;
   }
 }
 
-/* Publication PDF button: white fill, black text, subtle border */
+/* -------------------------
+   PDF button: white fill, black text
+   Keep targeted and robust so theme styles don't hide it.
+   ------------------------- */
 .pub-download-button {
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  padding: 0.375rem 0.75rem !important; /* matches px-3 py-1.5 */
-  background-color: #ffffff !important;   /* white background */
-  color: #111111 !important;              /* black text */
+  padding: 0.375rem 0.75rem !important;
+  background-color: #ffffff !important;
+  color: #111111 !important;
   text-decoration: none !important;
-  border-radius: 0.375rem !important;     /* rounded */
-  border: 1px solid rgba(0,0,0,0.08) !important; /* subtle border */
+  border-radius: 0.375rem !important;
+  border: 1px solid rgba(0,0,0,0.08) !important;
   box-shadow: 0 1px 0 rgba(0,0,0,0.02) !important;
   opacity: 1 !important;
   visibility: visible !important;
   pointer-events: auto !important;
 }
 
-/* Hover / focus states: slightly darker border / light gray background */
 .pub-download-button:hover,
 .pub-download-button:focus {
   background-color: #f7f7f7 !important;
@@ -72,84 +76,88 @@
   border-color: rgba(0,0,0,0.12) !important;
 }
 
-/* Ensure children inherit color and remain visible */
 .pub-download-button * {
   color: inherit !important;
   opacity: 1 !important;
 }
 
-/* Defensive rule: ensure anchor and immediate parents are visible */
-.publication p a.pub-download-button,
-.publication p a.pub-download-button * {
-  opacity: 1 !important;
-  visibility: visible !important;
-}
-
-/* Ensure author/portrait avatar images remain square (not circular) */
-/* Theme may set avatar shape via params or utility classes; enforce square here */
-.author-avatar img,
-.author .avatar,
-img.avatar,
-.profile-avatar img,
-.author-image img {
+/* -------------------------
+   Avatar / portrait rules
+   Scope narrowly to profile avatars to avoid affecting other images.
+   ------------------------- */
+/* Ensure the profile avatar remains square (not circular) and fills the square. */
+#profile img.avatar,
+#profile .avatar {
   border-radius: 0 !important;
   overflow: visible !important;
-  object-fit: cover !important; /* keep image filling the square */
+  object-fit: cover !important;
 }
 
-/* FRONT PAGE: show only avatar for the About widget */
+/* If other selectors are used in some places, include them as narrowly-scoped fallbacks */
+#profile img.avatar.avatar-square,
+#profile .avatar.avatar-square {
+  border-radius: 0 !important;
+}
 
-/* Prefer this selector if your site body has class "home" (common Hugo theme) */
-body.home #profile .portrait-title,
-body.home #profile .network-icon,
-body.home .row > .col-lg-8 {
+/* -------------------------
+   About widget: hide only the portrait title (name/role/org) in the ABOUT SECTION
+   Scope to the about section so author pages and other widgets are unaffected.
+   Use section#about or .wg-about-biography depending on theme HTML.
+   ------------------------- */
+/* Primary selector (the page you showed uses section#about and class wg-about-biography) */
+section#about #profile .portrait-title,
+section#about #profile .portrait-title h2,
+section#about #profile .portrait-title h3 {
   display: none !important;
 }
 
-/* Fallback if your homepage body class is "index" or "page-home" — uncomment one if needed */
-/* body.index #profile .portrait-title, body.index #profile .network-icon, body.index .row > .col-lg-8 { display:none !important; } */
-/* .page-home #profile .portrait-title, .page-home #profile .network-icon, .page-home .row > .col-lg-8 { display:none !important; } */
-
-/* If you want a tiny caption or spacing adjustment after hiding the right column,
-   add a little vertical spacing under the portrait: */
-body.home #profile { margin-bottom: 0.5rem !important; }
-
-/* Try this if the previous selector didn't match: hide portrait title/org & right column
-   only when the About widget appears inside the normal page body wrapper. */
-.page-body #profile .portrait-title,
-.page-body #profile .network-icon,
-.page-body .row > .col-lg-8 {
-  display: none !important;
-}
-
-/* small spacing after avatar */
-.page-body #profile { margin-bottom: 0.5rem !important; }
-
-/* Restore bio/networking but keep only the portrait title hidden on the front page.
-   Place this at the end of static/css/layout-adjust.css so it overrides earlier rules. */
-
-/* Hide only the portrait title block (name / role / org) */
-.page-body #profile .portrait-title {
-  display: none !important;
-}
-
-/* Ensure networking icons are visible */
-.page-body #profile .network-icon {
+/* Keep networking icons visible and layout intact */
+section#about #profile .network-icon {
   display: flex !important;
   list-style: none !important;
   margin: 0 !important;
   padding: 0 !important;
 }
 
-/* Ensure the right column (bio / article-style / interests / education) is visible */
-.page-body .row > .col-lg-8,
-.page-body .article-style {
+/* Keep the right column (bio / article-style / interests / education) visible */
+section#about .row > .col-lg-8,
+section#about .article-style {
   display: block !important;
   visibility: visible !important;
   opacity: 1 !important;
 }
 
-/* Small spacing under the portrait */
-.page-body #profile {
+/* Small spacing under the portrait so layout doesn't look cramped */
+section#about #profile {
   margin-bottom: 0.5rem !important;
 }
+
+/* -------------------------
+   Small spacing tweaks for publications layout if desired
+   (uncomment or adjust if you want to tighten spacing further)
+   ------------------------- */
+/*
+.space-y-10 > * + * {
+  margin-top: 1rem !important;
+}
+
+.container h2 {
+  margin-bottom: 0.5rem !important;
+}
+
+article.publication.py-4 {
+  padding-top: 0.25rem !important;
+  padding-bottom: 0.75rem !important;
+}
+
+.publication figure {
+  margin-bottom: 0.5rem !important;
+}
+
+.publication hr {
+  margin-top: 1rem !important;
+  margin-bottom: 0.75rem !important;
+}
+*/
+
+/* End of layout-adjust.css */
