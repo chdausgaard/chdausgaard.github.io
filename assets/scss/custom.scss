@@ -140,6 +140,28 @@ section#about #profile .network-icon li {
   visibility: hidden !important;
 }
 
+/* Contact page: remove bullets/indent and align with normal content margin */
+section#contact .article-style,
+section#contact .article-style p,
+section#contact .article-style ul.contact-list {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
+
+section#contact .article-style ul.contact-list {
+  list-style: none !important;
+}
+
+section#contact .article-style ul.contact-list li {
+  margin: 0.25rem 0 !important;
+  padding: 0 !important;
+}
+
+/* Optional: slightly tighten vertical spacing for the contact lines */
+section#contact .article-style p {
+  margin: 0.25rem 0 !important;
+}
+
 /* If you previously added rules that forcibly show .network-icon (e.g. display:flex),
    remove or comment them out so this hide rule can take effect. */
 
