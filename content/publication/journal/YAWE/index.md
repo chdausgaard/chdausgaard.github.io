@@ -10,4 +10,5 @@ abstract: "When managing the economy, governments make decisions that influence 
 tags: economic voting, social groups
 featured: false
 featured_graph: "graph1.png"
+url_pdf: final_manuscript.pdf
 ---

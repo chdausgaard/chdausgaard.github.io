@@ -5,6 +5,7 @@ menu:
     weight: 100
 ---
 
+<p>&nbsp;</p>
 <p><strong>Email:</strong> c.dausgaard [at] ifs.ku.dk</p>
 <p><strong>Phone:</strong> (+45) 42 76 66 72</p>
 <p><strong>Twitter / X:</strong> <a href="https://x.com/chdausgaard">@chdausgaard</a></p>

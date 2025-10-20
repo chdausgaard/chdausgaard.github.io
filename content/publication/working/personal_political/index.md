@@ -10,4 +10,5 @@ abstract: "People often vote with their pocketbooks. Is this an effective tool f
 tags: economic voting
 featured: false
 featured_graph: "graph1.png"
+url_pdf: pbvoting_workingpaper.pdf
 ---
