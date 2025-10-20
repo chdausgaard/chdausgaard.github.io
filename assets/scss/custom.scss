@@ -96,26 +96,3 @@ img.avatar,
   overflow: visible !important;
   object-fit: cover !important; /* keep image filling the square */
 }
-
-/* Hide author name, role and organization in the landing-page about widget
-   while keeping the frontmatter in place for SEO. This targets the about
-   block on the homepage which uses `about.biography` and the site `type:`
-   landing page. Adjust selectors if your theme uses different classes. */
-body.home .about-widget .author-name,
-body.home .about-widget .author-role,
-body.home .about-widget .author-org,
-body.home .about-widget .author-title,
-body.home .about-widget h1.profile-name,
-body.home .about-widget h2.profile-role {
-  display: none !important;
-}
-
-/* Generic defensive selectors in case the theme uses different class names */
-body.home .profile .author-name,
-body.home .profile .profile-name,
-body.home .profile .profile-role,
-body.home .profile .role,
-body.home .author .name,
-body.home .author .role {
-  display: none !important;
-}
