@@ -111,13 +111,14 @@ section#about #profile .portrait-title h3 {
   display: none !important;
 }
 
-/* Keep networking icons visible and layout intact */
+/* Keep networking icons visible and layout intact 
 section#about #profile .network-icon {
   display: flex !important;
   list-style: none !important;
   margin: 0 !important;
   padding: 0 !important;
 }
+*/
 
 /* Keep the right column (bio / article-style / interests / education) visible */
 section#about .row > .col-lg-8,
@@ -131,6 +132,16 @@ section#about .article-style {
 section#about #profile {
   margin-bottom: 0.5rem !important;
 }
+
+/* Hide social/network icons in the front-page About widget (only in the About section) */
+section#about #profile .network-icon,
+section#about #profile .network-icon li {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* If you previously added rules that forcibly show .network-icon (e.g. display:flex),
+   remove or comment them out so this hide rule can take effect. */
 
 /* -------------------------
    Small spacing tweaks for publications layout if desired
