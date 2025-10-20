@@ -140,26 +140,31 @@ section#about #profile .network-icon li {
   visibility: hidden !important;
 }
 
-/* Contact page: remove bullets/indent and align with normal content margin */
-section#contact .article-style,
-section#contact .article-style p,
-section#contact .article-style ul.contact-list {
-  margin-left: 0 !important;
+/* Contact page: remove left offset/indent so lines align with H1 and the normal page margin */
+section#contact .universal-wrapper,
+section#contact .container,
+section#contact .article-style {
   padding-left: 0 !important;
+  margin-left: 0 !important;
+  width: 100% !important;
+  max-width: none !important;
+  box-sizing: border-box !important;
 }
 
-section#contact .article-style ul.contact-list {
-  list-style: none !important;
-}
-
-section#contact .article-style ul.contact-list li {
-  margin: 0.25rem 0 !important;
+/* In case there are column/grid rules forcing a left column, collapse it for the contact page */
+section#contact .row > .col-md-*, 
+section#contact .row > [class*="col-"] {
+  float: none !important;
+  display: block !important;
+  width: 100% !important;
+  margin: 0 !important;
   padding: 0 !important;
 }
 
-/* Optional: slightly tighten vertical spacing for the contact lines */
+/* Tidy vertical spacing for the contact paragraphs */
 section#contact .article-style p {
   margin: 0.25rem 0 !important;
+  padding: 0 !important;
 }
 
 /* If you previously added rules that forcibly show .network-icon (e.g. display:flex),
