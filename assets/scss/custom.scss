@@ -113,3 +113,14 @@ body.home .row > .col-lg-8 {
 /* If you want a tiny caption or spacing adjustment after hiding the right column,
    add a little vertical spacing under the portrait: */
 body.home #profile { margin-bottom: 0.5rem !important; }
+
+/* Try this if the previous selector didn't match: hide portrait title/org & right column
+   only when the About widget appears inside the normal page body wrapper. */
+.page-body #profile .portrait-title,
+.page-body #profile .network-icon,
+.page-body .row > .col-lg-8 {
+  display: none !important;
+}
+
+/* small spacing after avatar */
+.page-body #profile { margin-bottom: 0.5rem !important; }
