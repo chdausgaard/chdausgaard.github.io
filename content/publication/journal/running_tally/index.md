@@ -12,5 +12,7 @@ tags: social groups, party politics, political communication
 featured: false
 featured_graph: "graph1.png"
 #url_pdf: 
-
+[[url_custom]]
+    name = "Trained models"
+    url = "https://huggingface.co/groupappealslab"
 ---
