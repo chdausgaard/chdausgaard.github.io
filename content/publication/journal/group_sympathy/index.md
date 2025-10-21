@@ -13,7 +13,7 @@ abstract: "Recent scholarship devotes considerable attention to how social ident
 tags: social groups, party politics, vote choice, longitudinal analysis
 featured: false
 featured_graph: "groupsympathy_longitudinal.png"
-#url_pdf: group_appeals_final.pdf
-url_cite: 
+#url_pdf: 
+
 ---
 

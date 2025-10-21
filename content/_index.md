@@ -45,7 +45,7 @@ sections:
   - block: collection
     id: publications
     content:
-      title: Current Research
+      title: Publications
       filters:
         folders:
           - publication
