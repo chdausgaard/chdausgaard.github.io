@@ -115,12 +115,10 @@ highlight_name: true
 # Besides work, I spend most of my time endlessly listening to podcasts on Danish and American politics, embarking on large baking projects, playing music, and social and cultural activities in Copenhagen, where I live with my partner, Signe. 
 ---
 
-I’m a political scientist studying political behavior using experiments, text-as-data methods, and causal inference designs for observational data. I'm currently a PhD Candidate in Political Science at the University of Copenhagen, where I will continue as a postdoc in Fall 2025.
+I’m a political scientist studying political behavior. I'm currently a PhD Candidate in Political Science at the University of Copenhagen, where I will continue as a postdoc in Fall 2025.
 
-My research focuses on how voters’ economic interests and group identities shape their political judgments and responses to elite behavior. In my dissertation, I examine how group identities structure retrospective voting.
+My research focuses on how voters’ economic interests and group identities shape their political judgments and responses to elite behavior. In my dissertation, I examine how group identities structure retrospective voting. Two papers examine how voters hold incumbents accountable for the economic performance of and the effects of policies on their social groups. Another paper uses language models to trace how parties’ rhetorical group appeals shape voters’ perceptions of group-party linkages over three decades. A fourth paper applies policy microsimulation models to a large survey panel to assess how consistently voters reward or punish incumbents for policy-induced changes in their pocketbooks.
 
-One paper (conditionally accepted at the American Journal of Political Science) shows that voters hold incumbents accountable for the economic performance of their social groups, especially their trajectories relative to the national economy. Another (conditionally accepted at the Journal of Politics, with Frederik Hjorth) uses language models to trace how parties’ rhetorical group appeals shape voters’ perceptions of group-party linkages over three decades. A third paper applies policy microsimulation models to a large survey panel to assess how consistently voters reward or punish incumbents for policy-induced changes in their pocketbooks.
-
-Beyond the dissertation, I work on related topics in political behavior. In one paper with Frederik Hjorth and Martin Vinæs Larsen, I study how mainstream party accommodation of the radical right affects voters. In a paper with Daniel Cruz, I examine how Latin American legislators’ support for democracy depends on their party’s access to power. And in a project with Greg Eady, I study how exposure to damaging information about politicians can heighten partisan cynicism rather than strengthen accountability.
+Beyond the dissertation, I work on related projects on political behavior, including how mainstream party accommodation of the radical right affects voters, how legislators’ support for democracy depends on their party’s access to power, and how political cynicism shapes electoral accountability.
 
 {style="text-align: justify;"}
