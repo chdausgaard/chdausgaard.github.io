@@ -21,10 +21,6 @@ organizations:
   - name: University of Copenhagen
     url: https://politicalscience.ku.dk/
 
-# Optional: small credit line shown under the profile/avatar image on the front page.
-# Set to a short markdown string, e.g. "Photo: Jane Doe / Unsplash" or leave empty.
-image_credit: "Photo: (add credit here)"
-
 # Short bio (displayed in user profile at end of posts)
 bio: My research interests include the role of the economy in elections, the psychology of social group identities and causal inference.
 

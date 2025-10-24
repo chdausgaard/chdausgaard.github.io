@@ -76,6 +76,7 @@ features:
   avatar:
     gravatar: false
     shape: square
+    caption: "Freja Wille"
   comment:
     provider: ''
     disqus:
