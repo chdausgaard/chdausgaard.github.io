@@ -33,7 +33,12 @@
       <img class="avatar {{if eq $avatar_shape "square"}}avatar-square{{else}}avatar-circle{{end}}"
            width="{{ $avatar_image.Width }}" height="{{ $avatar_image.Height }}"
            src="{{ $avatar_image.RelPermalink }}" alt="{{$person_page.Title}}">
-      {{ end }}
+   {{ end }}
+
+   {{/* Optional image/photo credit for the avatar image. Set `image_credit` in the author's front matter. */}}
+   {{ with $person.image_credit }}
+   <div class="avatar-credit">{{ . | markdownify }}</div>
+   {{ end }}
 
       {{/* Portrait title and orgs: only show when NOT in widget mode (i.e., on author pages) */}}
       {{ if not $block.Params.widget }}

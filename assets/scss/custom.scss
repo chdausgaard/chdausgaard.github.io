@@ -133,6 +133,15 @@ section#about #profile {
   margin-bottom: 0.5rem !important;
 }
 
+/* Small, muted credit text beneath the profile avatar (optional). */
+#profile .avatar-credit {
+  font-size: 0.75rem !important;
+  color: rgba(0,0,0,0.55) !important;
+  text-align: center !important;
+  margin-top: 0.25rem !important;
+  line-height: 1.2 !important;
+}
+
 /* Hide social/network icons in the front-page About widget (only in the About section) */
 section#about #profile .network-icon,
 section#about #profile .network-icon li {
