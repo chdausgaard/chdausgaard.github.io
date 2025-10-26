@@ -12,6 +12,28 @@
     margin: 0 auto !important;
   }
 
+  /* -------------------------
+     Navbar / header alignment
+     Ensure header/navigation inner wrappers follow the same content width and
+     are centered like the rest of the site. This is a defensive set of
+     selectors to target common header/nav structures used by the theme.
+     Adjust selectors if your theme uses different class names.
+     ------------------------- */
+  header .container,
+  header .site-nav,
+  header .site-navigation,
+  .wy-nav-top .wy-nav-content,
+  .wy-nav-top .container,
+  .navbar .container,
+  .navbar-collapse {
+    max-width: 800px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
   /* Main text column */
   .col-lg-8 {
     max-width: 800px !important;
