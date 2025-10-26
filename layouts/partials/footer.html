@@ -1,0 +1,21 @@
+{{/*
+  Custom footer partial to render the site footer notice stored in
+  `Site.Params.footer.copyright.notice`.
+
+  This partial converts literal newlines in the YAML value into <br>
+  elements and renders the result as safe HTML so the photographer
+  credit appears on a separate line.
+*/}}
+<footer class="site-footer">
+  <div class="container">
+    {{- $footer := $.Site.Params.footer -}}
+    {{- if $footer -}}
+      {{- with $footer.copyright.notice }}
+        {{- $notice := . -}}
+        {{- /* Replace literal newlines with <br> so the block scalar shows a line break */ -}}
+        {{- $notice = replace $notice "\n" "<br>" -}}
+        <div class="site-footer-notice">{{ $notice | safeHTML }}</div>
+      {{- end -}}
+    {{- end -}}
+  </div>
+</footer>
