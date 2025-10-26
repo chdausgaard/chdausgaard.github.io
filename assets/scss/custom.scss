@@ -15,16 +15,19 @@
   /* -------------------------
      Navbar / header alignment
      Ensure header/navigation inner wrappers follow the same content width and
-     are centered like the rest of the site. This is a defensive set of
-     selectors to target common header/nav structures used by the theme.
-     Adjust selectors if your theme uses different class names.
+     are centered like the rest of the site. Target the theme's container
+     variants (e.g. container-xl) so both the site title and main menu align.
      ------------------------- */
   header .container,
+  header .container-xl,
+  header .container-xxl,
   header .site-nav,
   header .site-navigation,
+  .page-header .container-xl,
   .wy-nav-top .wy-nav-content,
   .wy-nav-top .container,
   .navbar .container,
+  .navbar .container-xl,
   .navbar-collapse {
     max-width: 800px !important;
     margin-left: auto !important;
