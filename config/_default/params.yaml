@@ -46,8 +46,7 @@ header:
 footer:
   copyright:
     notice: |
-      © {year} Christoffer H. Dausgaard. |
-      Photo © Freja Wille.
+      © {year} Christoffer H. Dausgaard. Photo © Freja Wille.
 #    license:
 #      enable: true
 #      allow_derivatives: false
