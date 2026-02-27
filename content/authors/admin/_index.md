@@ -115,10 +115,10 @@ highlight_name: true
 # Besides work, I spend most of my time endlessly listening to podcasts on Danish and American politics, embarking on large baking projects, playing music, and social and cultural activities in Copenhagen, where I live with my partner, Signe. 
 ---
 
-I’m a political scientist studying political behavior. I received my PhD in Political Science from the University of Copenhagen in Fall 2025, where I am now a postdoctoral researcher. My work has been published in outlets like the *American Journal of Political Science* and *Journal of Politics*.
+I’m a political scientist studying political behavior. I received my PhD in Political Science from the University of Copenhagen in Fall 2025, where I am now a postdoctoral researcher. My work has been published in the *American Journal of Political Science* and *Journal of Politics*.
 
-My research focuses on how voters’ economic interests and group identities shape their political judgments and responses to elite behavior. In my dissertation, I examine how group identities structure retrospective voting. Two papers examine how voters hold incumbents accountable for the economic performance of and the effects of policies on their social groups. Another paper uses language models to trace how parties’ rhetorical group appeals shape voters’ perceptions of group-party linkages over three decades. A fourth paper applies policy microsimulation models to a large survey panel to assess how consistently voters reward or punish incumbents for policy-induced changes in their pocketbooks.
+My research focuses on how voters’ economic interests and group identities shape their political judgments. My dissertation examines how group identities structure retrospective voting — how voters evaluate incumbents based on outcomes for their social groups, how parties’ rhetorical appeals shape perceived group-party linkages, and how voters respond to policy-induced changes in their personal finances.
 
-Beyond the dissertation, I work on related projects on political behavior, including how mainstream party accommodation of the radical right affects voters and how legislators’ support for democracy depends on their party’s access to power.
+Beyond the dissertation, I work on related projects in political behavior, e.g., how mainstream party accommodation of the radical right affects voters, how legislators’ support for democracy depends on their party’s access to power, and whether governments’ rhetorical appeals to social groups reflect actual policy outcomes.
 
 {style="text-align: justify;"}
