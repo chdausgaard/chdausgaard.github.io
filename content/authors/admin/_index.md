@@ -115,7 +115,7 @@ highlight_name: true
 # Besides work, I spend most of my time endlessly listening to podcasts on Danish and American politics, embarking on large baking projects, playing music, and social and cultural activities in Copenhagen, where I live with my partner, Signe. 
 ---
 
-I’m a political scientist studying political behavior. I received my PhD in Political Science from the University of Copenhagen in Fall 2025, where I am now a postdoctoral researcher.
+I’m a political scientist studying political behavior. I received my PhD in Political Science from the University of Copenhagen in Fall 2025, where I am now a postdoctoral researcher. My work has been published in outlets like the *American Journal of Political Science* and *Journal of Politics*.
 
 My research focuses on how voters’ economic interests and group identities shape their political judgments and responses to elite behavior. In my dissertation, I examine how group identities structure retrospective voting. Two papers examine how voters hold incumbents accountable for the economic performance of and the effects of policies on their social groups. Another paper uses language models to trace how parties’ rhetorical group appeals shape voters’ perceptions of group-party linkages over three decades. A fourth paper applies policy microsimulation models to a large survey panel to assess how consistently voters reward or punish incumbents for policy-induced changes in their pocketbooks.
 
