@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project overview
 
-Personal academic website for Christoffer H. Dausgaard (PhD Candidate, Political Science, University of Copenhagen). Built with Hugo and the Hugo Blox (formerly Wowchemy/Academic) theme, deployed via GitHub Pages.
+Personal academic website for Christoffer H. Dausgaard (PhD, Postdoc, Political Science, University of Copenhagen). Built with Hugo and the Hugo Blox (formerly Wowchemy/Academic) theme, deployed via GitHub Pages.
 
 ## Build and dev commands
 
@@ -60,7 +60,7 @@ Each publication bundle contains:
 
 All Hugo config lives in `config/_default/` as YAML files: `hugo.yaml` (main config), `params.yaml` (theme params), `menus.yaml` (navigation), `languages.yaml` (English only), `module.yaml` (theme imports).
 
-`baseURL` in `hugo.yaml` is a placeholder (`https://example.com/`); the actual URL is set at build time via `-b` flag.
+`baseURL` in `hugo.yaml` is set to `https://chdausgaard.github.io/`. CI deploys still pass `-b $URL` (GitHub Actions and Netlify), which overrides it — the config value is a safety net for local builds and any deploy path that omits `-b`.
 
 ## BibTeX import workflow
 
