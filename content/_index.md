@@ -1,6 +1,7 @@
 ---
 # Leave the homepage title empty to use the site title
 title: ''
+description: Personal website of Christoffer Hentzer Dausgaard, Postdoctoral Researcher in Political Science at the University of Copenhagen. Research on economic voting, social group identities, and causal inference.
 date: 2022-10-24
 type: landing
 

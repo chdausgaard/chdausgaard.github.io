@@ -1,5 +1,6 @@
 ---
 title: "Contact"
+description: Contact information for Christoffer Hentzer Dausgaard, University of Copenhagen.
 menu:
   main:
     weight: 100

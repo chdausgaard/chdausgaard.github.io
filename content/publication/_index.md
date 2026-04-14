@@ -1,5 +1,6 @@
 ---
 title: Research
+description: Peer-reviewed articles, book chapters, and working papers by Christoffer Hentzer Dausgaard on economic voting, group identities, and political behavior.
 cms_exclude: true
 
 # View.

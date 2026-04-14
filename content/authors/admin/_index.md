@@ -2,6 +2,8 @@
 # Display name
 title: Christoffer H. Dausgaard
 
+description: Christoffer Hentzer Dausgaard is a Postdoctoral Researcher in Political Science at the University of Copenhagen. Research interests include the role of the economy in elections, the psychology of social group identities, and causal inference.
+
 # Full name (for SEO)
 first_name: Christoffer Hentzer
 last_name: Dausgaard

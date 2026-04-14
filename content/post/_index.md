@@ -1,5 +1,6 @@
 ---
 title: Posts
+description: Posts and notes by Christoffer Hentzer Dausgaard.
 cms_exclude: true
 
 # View.
